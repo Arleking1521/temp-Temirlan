@@ -1,0 +1,40 @@
+команда для создания виртуальной среды
+python -m venv myvenv - для Windows
+python3 -m venv myvenv - для MacOS
+
+Активация виртуальной среды:
+myvenv\Scripts\activate - для Windows
+source myvenv/bin/activate - MacOS, Linux
+
+Установка нужных пакетов:
+pip install django
+
+Создание Проекта
+django-admin startproject blog .
+
+Создание таблиц и соединений в БД
+python manage.py migrate
+
+Запуск проекта
+python manage.py runserver
+
+Создание супер пользователя
+python manage.py createsuperuser
+
+Создание приложения:
+python manage.py startapp post
+
+Создание миграций:
+python manage.py makemigrations
+
+Сбор переводов из html документов 
+django-admin makemessages -l en -e html
+
+Компиляция сообщений из .po файла в .mo файл
+django-admin compilemessages
+
+Сохранение пакетов 
+pip freeze > requirements.txt
+
+Установка пакетов из файла
+pip install -r requirements.txt
